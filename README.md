@@ -1,12 +1,12 @@
 # 4.SIMULATION AND IMPLEMENTATION OF SEQUENTIAL LOGIC CIRCUITS
 
-# AIM: 
+## AIM: 
  To simulate and synthesis SR, JK, T, D - FLIPFLOP, COUNTER DESIGN using Vivado 2023.1.
 
-# APPARATUS REQUIRED:
+## APPARATUS REQUIRED:
 Vivado 2023.1
 
-# PROCEDURE:
+## PROCEDURE:
 1. Open Vivado: Launch Xilinx Vivado software on your computer.
 
 2. Create a New Project: Click on "Create Project" from the welcome page or navigate through "File" > "Project" > "New".
@@ -27,11 +27,11 @@ Vivado 2023.1
 
 # SR FLIPFLOP:
 
-# LOGIC DIAGRAM:
+## LOGIC DIAGRAM:
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-4/assets/6987778/77fb7f38-5649-4778-a987-8468df9ea3c3)
 
-# VERILOG CODE:
+## VERILOG CODE:
 ```
 module SR_flipflop (q, q_bar, s,r, clk, reset);
   input s,r,clk, reset;
@@ -53,18 +53,18 @@ module SR_flipflop (q, q_bar, s,r, clk, reset);
 endmodule
 ```
 
-# OUTPUT WAVEFORM:
+## OUTPUT WAVEFORM:
 
 ![SR Flip Flop](https://github.com/RCKcharan10/VLSI-LAB-EXP-4/assets/117891438/c3f2b9c5-897f-48ef-b12d-2f446de70cb8)
 ![image](https://github.com/RCKcharan10/VLSI-LAB-EXP-4/assets/117891438/48ce566a-5f76-41c5-a147-39353db15a83)
 
 # JK FLIPFLOP:
 
-# LOGIC DIAGRAM:
+## LOGIC DIAGRAM:
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-4/assets/6987778/1510e030-4ddc-42b1-88ce-d00f6f0dc7e6)
 
- # VERILOG CODE:
+ ## VERILOG CODE:
 ```
 module JK_flipflop (q, q_bar, j,k, clk, reset);
   input j,k,clk, reset;
@@ -85,7 +85,7 @@ module JK_flipflop (q, q_bar, j,k, clk, reset);
   assign q_bar = ~q;
 endmodule
 ```
-# OUTPUT WAVEFORM:
+## OUTPUT WAVEFORM:
 
 ![JK Flip flop](https://github.com/RCKcharan10/VLSI-LAB-EXP-4/assets/117891438/f58c6b39-81b3-400f-b2e6-5df43dd4f4ce)
 ![image](https://github.com/RCKcharan10/VLSI-LAB-EXP-4/assets/117891438/f8278a33-6719-4434-b2cf-752a62d60552)
@@ -96,7 +96,7 @@ endmodule
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-4/assets/6987778/7a020379-efb1-4104-85ee-439d660baa08)
  
-# VERILOG CODE:
+## VERILOG CODE:
 ```
 module tff (t,clk, rstn,q);  
  input t,clk, rstn;
@@ -112,14 +112,14 @@ module tff (t,clk, rstn,q);
   end  
 endmodule
 ```
-# OUTPUT WAVEFORM:
+## OUTPUT WAVEFORM:
 
 ![T Flip Flop](https://github.com/RCKcharan10/VLSI-LAB-EXP-4/assets/117891438/5bae902d-bc9e-48f1-b32c-fdb06441a797)
 ![image](https://github.com/RCKcharan10/VLSI-LAB-EXP-4/assets/117891438/d4b02fe0-f188-408b-be45-3dfa967359f0)
 
 # D FLIPFLOP:
 
-# LOGIC DIAGRAM:
+## LOGIC DIAGRAM:
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-4/assets/6987778/dda843c5-f0a0-4b51-93a2-eaa4b7fa8aa0)
 
@@ -140,7 +140,7 @@ begin
 end
 endmodule
 ```
-# OUTPUT WAVEFORM:
+## OUTPUT WAVEFORM:
 
 ![D Flip Flop](https://github.com/RCKcharan10/VLSI-LAB-EXP-4/assets/117891438/0aeeb1ce-64b7-48e0-bcbd-efbf6bf0010d)
 ![image](https://github.com/RCKcharan10/VLSI-LAB-EXP-4/assets/117891438/49b17a40-5e44-4b19-9ade-7e72da51b51c)
@@ -148,13 +148,13 @@ endmodule
 
 # COUNTER:
 
-# LOGIC DIAGRAM:
+## LOGIC DIAGRAM:
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-4/assets/6987778/a1fc5f68-aafb-49a1-93d2-779529f525fa)
 
-# VERILOG CODE
+## VERILOG CODE:
 
-# Ripple Carry Counter
+# Ripple Carry Counter:
 ```
 module D_FF(q, d, clk, reset);
 output q;
@@ -182,7 +182,7 @@ T_FF tff2(q[2], q[1], reset);
 T_FF tff3(q[3], q[2], reset);
 endmodule
 ```
-# MOD 10 Counter
+# MOD 10 Counter:
 ```
 module counter(
 input clk,rst,enable,
@@ -199,7 +199,7 @@ counter_output <= 0;
 end
 endmodule
 ```
-# UP-DOWN COUNTER
+# UP-DOWN COUNTER:
 ```
 module updown_counter(clk,rst,updown,out);
 input clk,rst,updown;
@@ -215,14 +215,14 @@ out=out-1;
 end
 endmodule
 ```
-# OUTPUT WAVEFORM:
+## OUTPUT WAVEFORM:
 
-# Ripple Carry Counter
+# Ripple Carry Counter:
 
 ![image](https://github.com/RCKcharan10/VLSI-LAB-EXP-4/assets/117891438/4d0b64e6-9811-4969-bebd-aaa05597da58)
 ![image](https://github.com/RCKcharan10/VLSI-LAB-EXP-4/assets/117891438/e12abde7-abf5-4075-b5bb-0d99e499aede)
 
-# Mod 10 Counter
+# Mod 10 Counter:
 
 ![image](https://github.com/RCKcharan10/VLSI-LAB-EXP-4/assets/117891438/e1f376cc-deb6-4ea8-8f4d-0d347429447f)
 ![image](https://github.com/RCKcharan10/VLSI-LAB-EXP-4/assets/117891438/83841e49-e0f4-446f-931a-0c3501d5ed0f)
